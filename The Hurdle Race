@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+         Scanner in = new Scanner(System.in);
+    int n = in.nextInt();
+        int k = in.nextInt();
+        int[] height = new int[n];
+        int maxHt = 0;
+        for(int height_i=0; height_i < n; height_i++){
+            int n1 = in.nextInt();
+            height[height_i] = n1;
+            if(n1>maxHt){
+                maxHt = n1;
+            }
+        }
+        // your code goes here
+        int ans = (maxHt>k) ? (maxHt-k) : 0;
+        System.out.println(ans);
+    }
+}
